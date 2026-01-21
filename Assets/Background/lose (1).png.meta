@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 30cf9f75126ddd144809bbd82a3197f8
+guid: 056f50fb4136beb44ae09392fdd0af4b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6627013192755706976
-    second: Game_Button_Elements_0
+      213: 6869396185223807492
+    second: lose (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Game_Button_Elements_0
+      name: lose (1)_0
       rect:
         serializedVersion: 2
-        x: 2027
-        y: 1103
-        width: 1930
-        height: 991
+        x: 328
+        y: 1831
+        width: 1132
+        height: 533
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a308f3dc9e1804a0800000000000000
-      internalID: -6627013192755706976
+      spriteID: 40240b15f6ff45f50800000000000000
+      internalID: 6869396185223807492
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ffa3a5cdb280d5b4f8e685d6f1af4953
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Game_Button_Elements_0: -6627013192755706976
+      lose (1)_0: 6869396185223807492
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
