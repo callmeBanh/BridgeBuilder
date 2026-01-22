@@ -119,6 +119,53 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &102725326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 102725328}
+  - component: {fileID: 102725327}
+  m_Layer: 0
+  m_Name: ButtonController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &102725327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102725326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b40cb436fddcac4ea1e56a88fdab002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonController
+  soundIcon: {fileID: 0}
+  soundOnSprite: {fileID: 0}
+  soundOffSprite: {fileID: 0}
+--- !u!4 &102725328
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102725326}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.34605, y: 1.95819, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &563239833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,14 +1672,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 729458438}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
+        m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1689,22 +1729,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonAnimation
   scaleUpFactor: 1.2
   animationDuration: 0.5
-  fisrtSprite: {fileID: -9016940987807970471, guid: dbcf83fe46cb5d24cb06cf40af64057d, type: 3}
-  secondSprite: {fileID: -6627013192755706976, guid: 331fca56dbaebc847b3fd00927aebd33, type: 3}
---- !u!114 &1284021414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284021408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96b336fc2ee94b74da4ae23410a8bdfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MusicToggle
-  btnNoi: {fileID: -9016940987807970471, guid: dbcf83fe46cb5d24cb06cf40af64057d, type: 3}
-  btnLom: {fileID: -6627013192755706976, guid: 331fca56dbaebc847b3fd00927aebd33, type: 3}
 --- !u!1 &1320746508
 GameObject:
   m_ObjectHideFlags: 0
@@ -1852,8 +1876,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonAnimation
   scaleUpFactor: 1.2
   animationDuration: 0.5
-  fisrtSprite: {fileID: 1195894318107799268, guid: 79174528f8fde05449a1d91d80e991df, type: 3}
-  secondSprite: {fileID: 0}
 --- !u!1 &1416912831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2981,4 +3003,3 @@ SceneRoots:
   - {fileID: 682225716}
   - {fileID: 1966516104}
   - {fileID: 1964117742}
-  - {fileID: 729458440}
