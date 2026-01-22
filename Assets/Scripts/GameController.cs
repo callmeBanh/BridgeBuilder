@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement; // Bắt buộc có dòng này để chuyển cảnh
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
