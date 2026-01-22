@@ -12,16 +12,12 @@ public class ButtonAnimation : MonoBehaviour , IPointerEnterHandler, IPointerExi
 
    
 
-    // cấu hình sprite ban đầu
-    public Sprite fisrtSprite;
-    // cấu hình sprite thư 2
-    public Sprite secondSprite;
+    
 
     private Vector3 originalScale;
     private Image image;
     private Sprite originalSprite;
-    private bool isToggled = false;
-
+    
     private void Awake()
     {
         originalScale = transform.localScale;
@@ -48,21 +44,7 @@ public class ButtonAnimation : MonoBehaviour , IPointerEnterHandler, IPointerExi
         // strength: độ mạnh, duration: thời gian, frequency: độ rung
         Tween.PunchScale(transform, new Vector3(-0.1f, -0.1f, 0), 0.15f, 5);
 
-        if(image != null && secondSprite != null)
-        {
-            isToggled = !isToggled;
-            if(isToggled)
-            {
-                image.sprite = secondSprite;
-            }
-            else
-            {
-                image.sprite = fisrtSprite;
-            }
     }
 
-
-
     
-     }
- }
+}
