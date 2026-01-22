@@ -1,8 +1,14 @@
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
+    [SerializeField] private Image soundIcon;
+    [SerializeField] private Sprite soundOnSprite;
+    [SerializeField] private Sprite soundOffSprite;
+    private bool isSoundOn = true;
     public void GotoHome()
     {
         SceneManager.LoadScene("StartGame");
@@ -19,4 +25,23 @@ public class ButtonController : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
     }
+
+    public void ToggleSound()
+    {
+        isSoundOn = !isSoundOn;
+        if (isSoundOn)
+        {
+            soundIcon.sprite = soundOnSprite;
+            // Bật âm thanh trong game
+            AudioListener.volume = 1f;
+        }
+        else
+        {
+            soundIcon.sprite = soundOffSprite;
+            // Tắt âm thanh trong game
+            AudioListener.volume = 0f;
+        }
+    }
+
+
 }
