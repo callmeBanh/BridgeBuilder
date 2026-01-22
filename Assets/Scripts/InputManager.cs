@@ -3,15 +3,16 @@ using TMPro;
 using UnityEngine.UI;
 using System;
 using UnityEngine.SceneManagement;
-using System.Text.RegularExpressions;
 using System.Linq;
 using Unity.VisualScripting;
+
 public class InputManager : MonoBehaviour
 {
     // tham chiếu đến InputField
     public TMP_InputField inputMaDon;
     public TMP_InputField inputTen;
     public TMP_InputField inputSoDienThoai;
+    public TextMeshProUGUI thongBaoText;
 
     //Danh sách các đầu số hợp lệ tại Việt Nam (Cập nhật 2024)
     private readonly string[] validPrefixes = new string[]
@@ -39,7 +40,20 @@ public class InputManager : MonoBehaviour
     void Start()
     {
         btnPlay.onClick.AddListener(XuLiDangNhap);
+        updateThongBao("", Color.white);
+       
     }
+
+    void updateThongBao(string message , Color color)
+    {
+        if(thongBaoText != null)
+        {
+            thongBaoText.text = message;
+            thongBaoText.color = color;
+        }
+    }
+
+    
 
     // Update is called once per frame
     void XuLiDangNhap()
@@ -50,19 +64,20 @@ public class InputManager : MonoBehaviour
 
         if(string.IsNullOrEmpty(maDon) || string.IsNullOrEmpty(ten) || string.IsNullOrEmpty(soDienThoai))
         {
-            Debug.Log("Vui long nhap day du thong tin");
+           updateThongBao("vui lòng nhập đầy đủ thông tin", Color.red);
             return;
   
         }
 
         if(ten.Length < 2 || ten.Length > 50)
         {
-            Debug.Log("Ten phai tu 2 den 50 ky tu");
+            updateThongBao("Tên phải từ 2 đến 50 ký tự", Color.red);
             return;
         }
 
         if(!CheckPhoneNumber(soDienThoai))
         {
+            
             return;
         }
 
@@ -79,12 +94,12 @@ public class InputManager : MonoBehaviour
         //
         if(phoneNumber.Length != 10)
         {
-            Debug.Log("So dien thoai phai co 10 chu so");
+            updateThongBao("Số điện thoại phải có 10 chữ số", Color.red);
             return false;
         }
         if(!long.TryParse(phoneNumber, out _))
         {
-            Debug.Log("So dien thoai chi chua chu so");
+            updateThongBao("Số điện thoại chỉ chứa chữ số", Color.red);
             return false;
         }
         string dauSo = phoneNumber.Substring(0, 3);
@@ -94,10 +109,11 @@ public class InputManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Dau so khong hop le");
+            updateThongBao("Đầu số " + dauSo + " không hợp lệ", Color.red);
             return false;
         }
 
         
     }
+
 }

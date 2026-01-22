@@ -8,7 +8,7 @@ public class ButtonController : MonoBehaviour
     [SerializeField] private Image soundIcon;
     [SerializeField] private Sprite soundOnSprite;
     [SerializeField] private Sprite soundOffSprite;
-    private bool isSoundOn = false;
+    private bool isSoundOn = true;
     public void GotoHome()
     {
         SceneManager.LoadScene("StartGame");
