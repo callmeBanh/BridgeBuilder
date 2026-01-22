@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class VictoryManager : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class VictoryManager : MonoBehaviour
         Debug.Log("Đã nhận thưởng thành công!");
 
         // quay về Scene Đăng nhập/Menu chính:
-        //SceneManager.LoadScene("LoginScene"); 
+        SceneManager.LoadScene("StartGame"); 
     }
 
     void SaveDataToSystem()

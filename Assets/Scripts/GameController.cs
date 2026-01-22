@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -127,6 +128,7 @@ public class GameController : MonoBehaviour
             if (currentIdx == levelGen.totalPillars - 1)
             {
                 Debug.Log("VICTORY! BẠN ĐÃ CHIẾN THẮNG!");
+                SceneManager.LoadScene("Win");
                 // Có thể hiện bảng Win UI ở đây
             }
             else
@@ -141,6 +143,7 @@ public class GameController : MonoBehaviour
             // Bật vật lý để nhân vật rơi tự do
             Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
             if (rb != null) rb.bodyType = RigidbodyType2D.Dynamic;
+            SceneManager.LoadScene("Lose");
         }
     }
 
