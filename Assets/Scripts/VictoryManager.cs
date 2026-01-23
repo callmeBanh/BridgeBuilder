@@ -14,6 +14,17 @@ public class VictoryManager : MonoBehaviour
     void Start()
     {
         dialogPanel.SetActive(true);
+
+    // Kiểm tra xem có phần thưởng nào được lưu không
+        if (GameSession.WonReward != null)
+        {
+            txtUserName.text = "Chúc mừng: " + GameSession.PlayerName;
+            txtVoucherCode.text = "Mã nhận thưởng: " + GameSession.WonReward.rewardCode;
+            imgVoucher.sprite = GameSession.WonReward.rewardIcon;
+            
+            // (Tùy chọn) Hiện thêm tên Voucher nếu muốn
+            // Debug.Log("Voucher: " + GameSession.WonReward.rewardName);
+        }
     }
 
     // Hàm này sẽ được gọi khi người chơi đi qua 5 cột
@@ -38,10 +49,4 @@ public class VictoryManager : MonoBehaviour
         SceneManager.LoadScene("StartGame"); 
     }
 
-    void SaveDataToSystem()
-    {
-        // Leader lưu ý: Chỗ này sẽ kết nối với SĐT và Mã đơn hàng bạn thu thập ở Scene 1
-        // Ví dụ: Gửi API gồm {SĐT, OrderID, VoucherCode}
-        Debug.Log("Gửi dữ liệu nhận thưởng của khách hàng về Server...");
-    }
 }

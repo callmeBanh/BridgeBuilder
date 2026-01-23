@@ -80,7 +80,7 @@ public class InputManager : MonoBehaviour
             
             return;
         }
-
+        GameSession.PlayerName = ten;
         Debug.Log("Dang nhap thanh cong");
         SceneManager.LoadScene("GamePlay");
 
