@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonController
   soundIcon: {fileID: 1284021411}
-  soundOnSprite: {fileID: -9016940987807970471, guid: dbcf83fe46cb5d24cb06cf40af64057d, type: 3}
-  soundOffSprite: {fileID: -6627013192755706976, guid: 331fca56dbaebc847b3fd00927aebd33, type: 3}
+  soundOnSprite: {fileID: 21300000, guid: 38ec0776fb6b2455a9d6166b4814d5e2, type: 3}
+  soundOffSprite: {fileID: 21300000, guid: 09868a2567e8e495c84e92bfe43dbed3, type: 3}
 --- !u!4 &102725328
 Transform:
   m_ObjectHideFlags: 0
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d63e5ba3c64793d4bb44e226b9cae1bf, type: 3}
+  m_Sprite: {fileID: -1198260224233227898, guid: 223160c779f568a41bf45b282a502a55, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -602,8 +602,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294111991
-  m_fontColor: {r: 0.96981126, g: 0.9496831, b: 0.9496831, a: 1}
+    rgba: 4279374356
+  m_fontColor: {r: 0.07924521, g: 0.071021646, b: 0.071021646, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1841,7 +1841,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -9016940987807970471, guid: dbcf83fe46cb5d24cb06cf40af64057d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 38ec0776fb6b2455a9d6166b4814d5e2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1988,7 +1988,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1195894318107799268, guid: 79174528f8fde05449a1d91d80e991df, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ce857edf439f7445da139f48a7f3dcd4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2264,8 +2264,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294111991
-  m_fontColor: {r: 0.96981126, g: 0.9496831, b: 0.9496831, a: 1}
+    rgba: 4279703320
+  m_fontColor: {r: 0.09433961, g: 0.08953363, b: 0.08953363, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

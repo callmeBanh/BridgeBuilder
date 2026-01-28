@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement; // Bắt buộc có dòng này để chuyển cảnh
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -24,7 +24,10 @@ public class GameController : MonoBehaviour
     // Biến nội bộ
     private int currentIdx = 0;     
     private bool isInputLocked = false; 
-    private bool isHolding = false;     
+    private bool isHolding = false;  
+
+    [Header("Hệ thống Voucher")]
+    public List<RewardData> availableRewards;   
 
     void Start()
     {
@@ -125,10 +128,17 @@ public class GameController : MonoBehaviour
             // Kiểm tra nếu đã đến cột cuối cùng (Cột 5)
             if (currentIdx == levelGen.totalPillars - 1)
             {
-                Debug.Log("VICTORY! Chuyển sang màn Win...");
-                yield return new WaitForSeconds(0.5f); // Chờ xíu cho mượt
-                
-                // [QUAN TRỌNG] Chuyển sang Scene tên là "Win"
+                if (availableRewards != null && availableRewards.Count > 0)
+                {
+                    // 1. Chọn quà ngẫu nhiên
+                    int randomIndex = Random.Range(0, availableRewards.Count);
+                    GameSession.WonReward = availableRewards[randomIndex];
+            
+                     // 2. Ghi chú: Tên người chơi đã được lưu từ Scene Đăng nhập vào GameSession.PlayerName
+                    Debug.Log("Phần thưởng đã chọn: " + GameSession.WonReward.rewardName);
+                }
+
+                yield return new WaitForSeconds(0.5f);
                 SceneManager.LoadScene("Win");
             }
             else
