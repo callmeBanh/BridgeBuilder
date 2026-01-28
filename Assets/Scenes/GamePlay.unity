@@ -329,7 +329,7 @@ Transform:
   m_GameObject: {fileID: 974316183}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.33, y: -0.981, z: 0}
+  m_LocalPosition: {x: -4, y: -0.9, z: 0}
   m_LocalScale: {x: 1, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -855,8 +855,8 @@ MonoBehaviour:
   playerAnimator: {fileID: 1391379985}
   growSpeed: 5
   playerSpeed: 2
-  stickXOffset: -0.4
-  stickYOffset: 1.3
+  stickXOffset: 0
+  stickYOffset: 1.4
   availableRewards:
   - {fileID: 11400000, guid: c28cef8dbc334074ab20f86186ba47fa, type: 2}
   - {fileID: 11400000, guid: a17971af6f59fa54081d3bcb53e89941, type: 2}
@@ -889,19 +889,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2412237614428646709, guid: df701c99c2baadb4191e2cc060120621, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4
+      value: 1.2272242
       objectReference: {fileID: 0}
     - target: {fileID: 2412237614428646709, guid: df701c99c2baadb4191e2cc060120621, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.4
+      value: 1.0581914
       objectReference: {fileID: 0}
     - target: {fileID: 2412237614428646709, guid: df701c99c2baadb4191e2cc060120621, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.64
+      value: -4.7749
       objectReference: {fileID: 0}
     - target: {fileID: 2412237614428646709, guid: df701c99c2baadb4191e2cc060120621, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -2.9663
       objectReference: {fileID: 0}
     - target: {fileID: 2412237614428646709, guid: df701c99c2baadb4191e2cc060120621, type: 3}
       propertyPath: m_LocalPosition.z
@@ -938,7 +938,7 @@ PrefabInstance:
     - target: {fileID: 6192768519022726352, guid: df701c99c2baadb4191e2cc060120621, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1635800447168657944, guid: 6144b3f002cb88142bc048211f50a8b6, type: 3}
+      objectReference: {fileID: -331422953873232048, guid: f4013676dc3ad6e4bacf461a55ccb797, type: 3}
     - target: {fileID: 6192768519022726352, guid: df701c99c2baadb4191e2cc060120621, type: 3}
       propertyPath: m_Color.b
       value: 1
